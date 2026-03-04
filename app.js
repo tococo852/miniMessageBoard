@@ -1,9 +1,9 @@
 const express = require("express")
 const app= express()
-
-app.get("/", (req,res)=>{
-    res.send("hello world")
-})
+const indexRouter= require("./routes/indexRoutes")
+const newMessageRouter=require("./routes/newMessagesRoutes")
+app.use("/", indexRouter )
+app.use("/new",newMessageRouter)
 
 const PORT = 3000
 

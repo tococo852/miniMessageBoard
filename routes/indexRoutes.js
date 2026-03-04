@@ -10,3 +10,12 @@ const messages = [
     added: new Date()
   }
 ];
+
+const {Router} = require("express")
+const indexRouter= Router()
+
+indexRouter.get ("/",(req,res)=>{
+    res.send("welcome to the index page")
+} )
+
+module.exports= indexRouter
