@@ -1,7 +1,8 @@
 <div>
+    <a href="/new">Add Message</a>
      <% for (let i = 0; i < messages.length; i++) { %>
       <div>
-        <%= messages[i].user %> : <%= messages[i].text %> <span> <%= messages[i].added %></span>
+        <%= messages[i].user %> : <%= messages[i].text %> <span> <%= messages[i].added %></span> <a href="/details/<%= i %>">details</a>
         
     </div>
     <% } %>
